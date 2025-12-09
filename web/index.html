@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json2yaml - JSON to YAML Converter</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>json2yaml</h1>
+            <p>Convert JSON files to YAML format</p>
+        </header>
+
+        <main>
+            <div class="input-section">
+                <h2>Input JSON</h2>
+
+                <div class="upload-area" id="uploadArea">
+                    <div class="upload-content">
+                        <div class="upload-icon">📁</div>
+                        <p>Drop JSON file here or click to browse</p>
+                        <input type="file" id="fileInput" accept=".json" style="display: none;">
+                    </div>
+                </div>
+
+                <div class="or-divider">
+                    <span>OR</span>
+                </div>
+
+                <div class="paste-section">
+                    <label for="jsonContent">Paste JSON Content:</label>
+                    <textarea id="jsonContent" placeholder='{"key": "value", "array": [1, 2, 3]}'></textarea>
+                </div>
+
+                <button id="convertBtn" class="convert-btn" disabled>Convert to YAML</button>
+            </div>
+
+            <div class="result-section" id="resultSection" style="display: none;">
+                <h2>Conversion Result</h2>
+                <div class="result-content">
+                    <pre id="yamlOutput"></pre>
+                </div>
+                <div class="result-actions">
+                    <button id="copyBtn" class="copy-btn">Copy to Clipboard</button>
+                    <button id="downloadBtn" class="download-btn">Download YAML</button>
+                    <button id="newConversionBtn" class="new-btn">New Conversion</button>
+                </div>
+            </div>
+
+            <div class="error-section" id="errorSection" style="display: none;">
+                <h2>Error</h2>
+                <div class="error-content">
+                    <pre id="errorOutput"></pre>
+                </div>
+                <button id="tryAgainBtn" class="try-again-btn">Try Again</button>
+            </div>
+        </main>
+
+        <div class="loading" id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Converting...</p>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

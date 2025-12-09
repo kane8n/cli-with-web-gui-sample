@@ -1,0 +1,17 @@
+{
+  "name": "json2yaml",
+  "version": "1.0.0",
+  "description": "A sample CLI tool with Web GUI",
+  "features": [
+    "JSON to YAML conversion",
+    "Web-based GUI",
+    "Drag and drop support",
+    "Auto browser launch",
+    "Auto shutdown on browser close"
+  ],
+  "config": {
+    "port": 8080,
+    "timeout": 30,
+    "debug": false
+  }
+}
